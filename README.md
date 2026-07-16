@@ -139,7 +139,7 @@ The finished gear shift indicator, installed and running in the car.
 
 ## Credit
 
-The round IPS display wiring, driver setup, and screen graphics approach used in this project were based on [upir](https://www.youtube.com/@upir)'s tutorial, [Arduino UNO with Round LCD IPS Display](https://www.youtube.com/watch?v=pbqgrv5YSf0&list=PLYljjO3cgruen1KPtTqZPnxCy7SrkpltR&index=12). Big thanks for the clear breakdown of the display setup and code.
+The round IPS display wiring, driver setup, and screen graphics approach used in this project were based on [upir](https://www.youtube.com/@upir_upir)'s tutorial, [Arduino UNO with Round LCD IPS Display](https://www.youtube.com/watch?v=pbqgrv5YSf0&list=PLYljjO3cgruen1KPtTqZPnxCy7SrkpltR&index=12). Big thanks for the clear breakdown of the display setup and code.
 
 **Display datasheets / reference docs:**
 - [MSP0962/MSP0963 Specification (PDF)](https://www.lcdwiki.com/res/MSP0962_MSP0963/MSP0962_MSP0963_Specification_EN_V1.0.pdf)
