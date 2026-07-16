@@ -87,37 +87,26 @@ With the printed board in hand, next came test-fitting it in the car and validat
 </p>
 
 **Fitment test:**
-<p align="center">
-  <video src="https://raw.githubusercontent.com/ChickenSoda04/BMW-E39-Gear-Shift-Indicator/main/videos/testing_pcb_fitment.mp4" controls width="600">
-    Your browser does not support the video tag.
-  </video>
-</p>
+<video src="https://github.com/user-attachments/assets/2465236a-05b8-4c8a-bc68-1f0bb54ee02c" controls width="600">
+  Your browser does not support the video tag.
+</video>
+
+
 
 **Hall effect sensor testing:**
-<p align="center">
-  <video src="https://raw.githubusercontent.com/ChickenSoda04/BMW-E39-Gear-Shift-Indicator/main/videos/testing_hall_effect_sensors.mp4" controls width="600">
-    Your browser does not support the video tag.
-  </video>
-</p>
+<video src="https://github.com/user-attachments/assets/9dc73ef9-2bc4-42a9-a8d6-f1dff1a54896" controls width="600">
+  Your browser does not support the video tag.
+</video>
 
----
 
 ## 5. Final Project Demo
 
 The finished gear shift indicator, installed and running in the car.
 
-<p align="center">
-  <video src="https://raw.githubusercontent.com/ChickenSoda04/BMW-E39-Gear-Shift-Indicator/main/videos/gear_shift_indicator_demo.mp4" controls width="600">
-    Your browser does not support the video tag.
-  </video>
-</p>
-
-**Initial screen demo:**
-<p align="center">
-  <video src="https://raw.githubusercontent.com/ChickenSoda04/BMW-E39-Gear-Shift-Indicator/main/videos/initial_screen_demo.mp4" controls width="600">
-    Your browser does not support the video tag.
-  </video>
-</p>
+<video src="https://github.com/user-attachments/assets/c1d5d6ef-f15f-41d3-aa31-91ed154f17f3
+" controls width="600">
+  Your browser does not support the video tag.
+</video>
 
 ---
 
