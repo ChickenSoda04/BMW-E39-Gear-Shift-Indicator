@@ -1,21 +1,44 @@
-# BMW-E39-Gear-Shift-Indicator
-A custom PCB gear shift indicator for the BMW E39, built from scratch — from a cardboard fitment mockup to a KiCad schematic/PCB, through JLCPCB manufacturing, to a working install in the car.
+# BMW E39 Gear Shift Indicator
 
-<p align="center">
-  <img src="photos/final_pcb_image.jpg" width="70%" alt="Final PCB">
-</p>
+A custom PCB gear shift indicator for the BMW E39, built from scratch — from a breadboard prototype and Arduino code, through a cardboard fitment mockup, a KiCad schematic/PCB, JLCPCB manufacturing, to a working install in the car.
 
 ## Table of Contents
-- [1. Measuring Template with Cardboard](#1-measuring-template-with-cardboard)
-- [2. KiCad Schematic & PCB](#2-kicad-schematic--pcb)
-- [3. Printing from JLCPCB](#3-printing-from-jlcpcb)
-- [4. Testing Assembly in Car](#4-testing-assembly-in-car)
-- [5. Final Project Demo](#5-final-project-demo)
-- [Repo Structure](#repo-structure)
+- [1. Breadboard Prototype & Arduino Code](#1-breadboard-prototype--arduino-code)
+- [2. Measuring Template with Cardboard](#2-measuring-template-with-cardboard)
+- [3. KiCad Schematic & PCB](#3-kicad-schematic--pcb)
+- [4. Printing from JLCPCB](#4-printing-from-jlcpcb)
+- [5. Testing Assembly in Car](#5-testing-assembly-in-car)
+- [6. Final Project Demo](#6-final-project-demo)
+- [Credit](#credit)
 
 ---
 
-## 1. Measuring Template with Cardboard
+## 1. Breadboard Prototype & Arduino Code
+
+Before designing a PCB, I built the circuit on a breadboard — wiring up the display and hall effect sensors to an Arduino — and wrote and tested the code to make sure the logic and display output worked correctly before committing to a custom board. The display datasheets were extremely helpful for getting the screen working with the Arduino micro controller. 
+
+
+
+
+
+**Initial screen demo:**
+<p align="center">
+  <video src="https://github.com/user-attachments/assets/d19b766d-0b28-46d4-b545-26aa207e68b7" controls width="600">
+    Your browser does not support the video tag.
+  </video>
+</p>
+
+<p align="center">
+  <video src="https://github.com/user-attachments/assets/6b89061c-957d-4a28-bf3f-c886c59b977f" controls width="600">
+    Your browser does not support the video tag.
+  </video>
+</p>
+
+
+
+---
+
+## 2. Measuring Template with Cardboard
 
 Before committing to a PCB outline, I cut a cardboard template to match the exact mounting space in the dash/console, so the final board would drop in without any fitment surprises.
 
@@ -31,7 +54,7 @@ Before committing to a PCB outline, I cut a cardboard template to match the exac
 
 ---
 
-## 2. KiCad Schematic & PCB
+## 3. KiCad Schematic & PCB
 
 With the form factor confirmed, I designed the schematic and PCB layout in KiCad, matching the board outline to the cardboard template.
 
@@ -46,13 +69,11 @@ With the form factor confirmed, I designed the schematic and PCB layout in KiCad
   <img src="photos/kicad_back.png" width="45%" alt="KiCad PCB - back">
 </p>
 
-<p align="center">
-  <img src="photos/kicad_pcb_image.jpg" width="70%" alt="KiCad PCB render">
-</p>
 
 **3D render walkthrough:**
 <p align="center">
-  <video src="https://raw.githubusercontent.com/ChickenSoda04/BMW-E39-Gear-Shift-Indicator/main/videos/final_kicad_pcb.mp4" controls width="600">
+  <video src="https://github.com/user-attachments/assets/9900a72d-7016-4ad4-b393-e1eb116858c7
+" controls width="600">
     Your browser does not support the video tag.
   </video>
 </p>
@@ -61,9 +82,13 @@ All CAD source files (schematic, PCB, project, and Gerbers) are in [`gear_indica
 
 ---
 
-## 3. Printing from JLCPCB
+## 4. Printing from JLCPCB
 
 Once the design was finalized, the Gerber files were sent to JLCPCB for manufacturing.
+
+<p align="center">
+  <img src="photos/final_pcb_image.jpg" width="70%" alt="Final PCB">
+</p>
 
 <p align="center">
   <img src="photos/pcb_front.png" width="45%" alt="Printed PCB - front">
@@ -78,7 +103,7 @@ Once the design was finalized, the Gerber files were sent to JLCPCB for manufact
 
 ---
 
-## 4. Testing Assembly in Car
+## 5. Testing Assembly in Car
 
 With the printed board in hand, next came test-fitting it in the car and validating the hall effect sensors against actual gear shift positions.
 
@@ -87,55 +112,36 @@ With the printed board in hand, next came test-fitting it in the car and validat
 </p>
 
 **Fitment test:**
-<video src="https://github.com/user-attachments/assets/2465236a-05b8-4c8a-bc68-1f0bb54ee02c" controls width="600">
-  Your browser does not support the video tag.
-</video>
-
-
-
-**Hall effect sensor testing:**
-<video src="https://github.com/user-attachments/assets/9dc73ef9-2bc4-42a9-a8d6-f1dff1a54896" controls width="600">
-  Your browser does not support the video tag.
-</video>
-
-
-## 5. Final Project Demo
-
-The finished gear shift indicator, installed and running in the car.
-
-<video src="https://github.com/user-attachments/assets/c1d5d6ef-f15f-41d3-aa31-91ed154f17f3
-" controls width="600">
-  Your browser does not support the video tag.
-</video>
+<p align="center">
+  <video src="https://github.com/user-attachments/assets/2465236a-05b8-4c8a-bc68-1f0bb54ee02c" controls width="600">
+    Your browser does not support the video tag.
+  </video>
+</p>
 
 ---
 
-## Repo Structure
+## 6. Final Project Demo
 
-```
-BMW-E39-Gear-Shift-Indicator/
-├── gear_indicator_cad_files/
-│   ├── gbr/                          # Gerber files for manufacturing
-│   ├── gear_indicator_pcb.kicad_pcb
-│   ├── gear_indicator_pcb.kicad_pro
-│   └── gear_indicator_pcb.kicad_sch
-├── photos/
-│   ├── before.jpg
-│   ├── final_pcb_image.jpg
-│   ├── kicad_back.png
-│   ├── kicad_front.png
-│   ├── kicad_pcb_image.jpg
-│   ├── measuring_template.jpg
-│   ├── pcb_back.png
-│   ├── pcb_front.png
-│   └── schematic.png
-├── videos/
-│   ├── cardboard_template.mp4
-│   ├── final_kicad_pcb.mp4
-│   ├── gear_shift_indicator_demo.mp4
-│   ├── initial_screen_demo.mp4
-│   ├── printed_pcb.mp4
-│   ├── testing_hall_effect_sensors.mp4
-│   └── testing_pcb_fitment.mp4
-└── README.md
-```
+The finished gear shift indicator, installed and running in the car.
+
+<p align="center">
+  <video src="https://github.com/user-attachments/assets/e65f4005-9a61-41ae-bb93-482aaea8f4e5
+" controls width="600">
+    Your browser does not support the video tag.
+  </video>
+</p>
+
+
+
+
+
+---
+
+## Credit
+
+The round IPS display wiring, driver setup, and screen graphics approach used in this project were based on [upir](https://www.youtube.com/@upir)'s tutorial, [Arduino UNO with Round LCD IPS Display](https://www.youtube.com/watch?v=pbqgrv5YSf0&list=PLYljjO3cgruen1KPtTqZPnxCy7SrkpltR&index=12). Big thanks for the clear breakdown of the display setup and code.
+
+**Display datasheets / reference docs:**
+- [MSP0962/MSP0963 Specification (PDF)](https://www.lcdwiki.com/res/MSP0962_MSP0963/MSP0962_MSP0963_Specification_EN_V1.0.pdf)
+- [MSP0962/MSP0963 SPI Demo Instructions — UNO/Mega2560 (PDF)](https://www.lcdwiki.com/res/MSP0962_MSP0963/0.96inch_SPI_MSP0962_MSP0963_UNO_Mega2560_Demo_Instructions_EN.pdf)
+
