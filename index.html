@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMW E39 Gear Shift Indicator — README</title>
+<meta name="description" content="A custom PCB gear shift indicator for the BMW E39, built from breadboard prototype through KiCad schematic to a working in-car install.">
+<style>
+  :root{
+    --border:#d0d7de;
+    --text:#1f2328;
+    --muted:#59636e;
+    --link:#0969da;
+    --bg:#ffffff;
+    --page:#f6f8fa;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    margin:0;
+    background:var(--page);
+    color:var(--text);
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    line-height:1.6;
+    font-size:16px;
+  }
+  .card{
+    max-width:860px;
+    margin:32px auto;
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:8px;
+    padding:32px 40px 48px;
+  }
+  h1{ font-size:28px; font-weight:600; margin:0 0 16px; padding-bottom:12px; border-bottom:1px solid var(--border); }
+  h2{ font-size:20px; font-weight:600; margin:36px 0 12px; padding-bottom:8px; border-bottom:1px solid var(--border); }
+  p{ margin:0 0 16px; color:var(--text); }
+  a{ color:var(--link); text-decoration:none; }
+  a:hover{ text-decoration:underline; }
+  ul{ margin:0 0 16px; padding-left:24px; }
+  li{ margin-bottom:4px; }
+  hr{ border:none; border-top:1px solid var(--border); margin:24px 0; }
+  strong{ font-weight:600; }
+  code{ font-family:ui-monospace, "SFMono-Regular", Menlo, monospace; background:#eef0f2; padding:1px 5px; border-radius:4px; font-size:0.9em; }
+
+  .media-block{ text-align:center; margin:16px 0; }
+  .media-block img, .media-block video{
+    max-width:100%;
+    border-radius:6px;
+    border:1px solid var(--border);
+  }
+  .media-block img{ width:70%; }
+  .media-block video{ width:600px; max-width:100%; }
+  .media-row{ display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin:16px 0; }
+  .media-row img{ width:45%; max-width:320px; border-radius:6px; border:1px solid var(--border); }
+
+  @media (max-width:600px){
+    .card{ margin:0; border-radius:0; padding:24px 20px 40px; }
+    .media-block img{ width:100%; }
+  }
+</style>
+</head>
+<body>
+<div class="card">
+
+  <h1>BMW E39 Gear Shift Indicator</h1>
+  <p>A custom PCB gear shift indicator for the BMW E39, built from scratch — from a breadboard prototype and Arduino code, through a cardboard fitment mockup, a KiCad schematic/PCB, JLCPCB manufacturing, to a working install in the car.</p>
+
+  <h2>Table of Contents</h2>
+  <ul>
+    <li><a href="#stage-1">1. Breadboard Prototype &amp; Arduino Code</a></li>
+    <li><a href="#stage-2">2. Measuring Template with Cardboard</a></li>
+    <li><a href="#stage-3">3. KiCad Schematic &amp; PCB</a></li>
+    <li><a href="#stage-4">4. Printing from JLCPCB</a></li>
+    <li><a href="#stage-5">5. Testing Assembly in Car</a></li>
+    <li><a href="#stage-6">6. Final Project Demo</a></li>
+    <li><a href="#credit">Credit</a></li>
+  </ul>
+
+  <hr>
+
+  <h2 id="stage-1">1. Breadboard Prototype &amp; Arduino Code</h2>
+  <p>Before designing a PCB, I built the circuit on a breadboard — wiring up the display and hall effect sensors to an Arduino — and wrote and tested the code to make sure the logic and display output worked correctly before committing to a custom board. The display datasheets were extremely helpful for getting the screen working with the Arduino micro controller.</p>
+
+  <p><strong>Initial screen demo:</strong></p>
+  <div class="media-block">
+    <video controls preload="none" src="https://github.com/user-attachments/assets/d19b766d-0b28-46d4-b545-26aa207e68b7">Your browser does not support the video tag.</video>
+  </div>
+  <div class="media-block">
+    <video controls preload="none" src="https://github.com/user-attachments/assets/6b89061c-957d-4a28-bf3f-c886c59b977f">Your browser does not support the video tag.</video>
+  </div>
+
+  <hr>
+
+  <h2 id="stage-2">2. Measuring Template with Cardboard</h2>
+  <p>Before committing to a PCB outline, I cut a cardboard template to match the exact mounting space in the dash/console, so the final board would drop in without any fitment surprises.</p>
+
+  <div class="media-block">
+    <img src="https://raw.githubusercontent.com/ChickenSoda04/BMW-E39-Gear-Shift-Indicator/main/photos/measuring_template.jpg" alt="Cardboard measuring template">
+  </div>
+  <div class="media-block">
+    <video controls preload="none" src="https://raw.githubusercontent.com/ChickenSoda04/BMW-E39-Gear-Shift-Indicator/main/videos/cardboard_template.mp4">Your browser does not support the video tag.</video>
+  </div>
+
+  <hr>
+
+  <h2 id="stage-3">3. KiCad Schematic &amp; PCB</h2>
+  <p>With the form factor confirmed, I designed the schematic and PCB layout in KiCad, matching the board outline to the cardboard template.</p>
+
+  <p><strong>Schematic:</strong></p>
+  <div class="media-block">
+    <img src="https://raw.githubusercontent.com/ChickenSoda04/BMW-E39-Gear-Shift-Indicator/main/photos/schematic.png" alt="KiCad schematic">
+  </div>
+
+  <p><strong>PCB Layout (Front / Back):</strong></p>
+  <div class="media-row">
+    <img src="https://raw.githubusercontent.com/ChickenSoda04/BMW-E39-Gear-Shift-Indicator/main/photos/kicad_front.png" alt="KiCad PCB - front">
+    <img src="https://raw.githubusercontent.com/ChickenSoda04/BMW-E39-Gear-Shift-Indicator/main/photos/kicad_back.png" alt="KiCad PCB - back">
+  </div>
+
+  <p><strong>3D render walkthrough:</strong></p>
+  <div class="media-block">
+    <video controls preload="none" src="https://github.com/user-attachments/assets/9900a72d-7016-4ad4-b393-e1eb116858c7">Your browser does not support the video tag.</video>
+  </div>
+
+  <p>All CAD source files (schematic, PCB, project, and Gerbers) are in <a href="https://github.com/ChickenSoda04/BMW-E39-Gear-Shift-Indicator/blob/main/gear_indicator_cad_files" target="_blank" rel="noopener"><code>gear_indicator_cad_files/</code></a>.</p>
+
+  <hr>
+
+  <h2 id="stage-4">4. Printing from JLCPCB</h2>
+  <p>Once the design was finalized, the Gerber files were sent to JLCPCB for manufacturing.</p>
+
+  <div class="media-block">
+    <img src="https://raw.githubusercontent.com/ChickenSoda04/BMW-E39-Gear-Shift-Indicator/main/photos/final_pcb_image.jpg" alt="Final PCB">
+  </div>
+  <div class="media-row">
+    <img src="https://raw.githubusercontent.com/ChickenSoda04/BMW-E39-Gear-Shift-Indicator/main/photos/pcb_front.png" alt="Printed PCB - front">
+    <img src="https://raw.githubusercontent.com/ChickenSoda04/BMW-E39-Gear-Shift-Indicator/main/photos/pcb_back.png" alt="Printed PCB - back">
+  </div>
+  <div class="media-block">
+    <video controls preload="none" src="https://raw.githubusercontent.com/ChickenSoda04/BMW-E39-Gear-Shift-Indicator/main/videos/printed_pcb.mp4">Your browser does not support the video tag.</video>
+  </div>
+
+  <hr>
+
+  <h2 id="stage-5">5. Testing Assembly in Car</h2>
+  <p>With the printed board in hand, next came test-fitting it in the car and validating the hall effect sensors against actual gear shift positions.</p>
+
+  <div class="media-block">
+    <img src="https://raw.githubusercontent.com/ChickenSoda04/BMW-E39-Gear-Shift-Indicator/main/photos/before.jpg" alt="Before install">
+  </div>
+
+  <p><strong>Fitment test:</strong></p>
+  <div class="media-block">
+    <video controls preload="none" src="https://github.com/user-attachments/assets/2465236a-05b8-4c8a-bc68-1f0bb54ee02c">Your browser does not support the video tag.</video>
+  </div>
+
+  <hr>
+
+  <h2 id="stage-6">6. Final Project Demo</h2>
+  <p>The finished gear shift indicator, installed and running in the car.</p>
+
+  <div class="media-block">
+    <video controls preload="none" src="https://github.com/user-attachments/assets/e65f4005-9a61-41ae-bb93-482aaea8f4e5">Your browser does not support the video tag.</video>
+  </div>
+
+  <hr>
+
+  <h2 id="credit">Credit</h2>
+  <p>The round IPS display wiring, driver setup, and screen graphics approach used in this project were based on <a href="https://www.youtube.com/@upir" target="_blank" rel="noopener">upir</a>'s tutorial, <a href="https://www.youtube.com/watch?v=pbqgrv5YSf0&list=PLYljjO3cgruen1KPtTqZPnxCy7SrkpltR&index=12" target="_blank" rel="noopener">Arduino UNO with Round LCD IPS Display</a>. Big thanks for the clear breakdown of the display setup and code.</p>
+
+  <p><strong>Display datasheets / reference docs:</strong></p>
+  <ul>
+    <li><a href="https://www.lcdwiki.com/res/MSP0962_MSP0963/MSP0962_MSP0963_Specification_EN_V1.0.pdf" target="_blank" rel="noopener">MSP0962/MSP0963 Specification (PDF)</a></li>
+    <li><a href="https://www.lcdwiki.com/res/MSP0962_MSP0963/0.96inch_SPI_MSP0962_MSP0963_UNO_Mega2560_Demo_Instructions_EN.pdf" target="_blank" rel="noopener">MSP0962/MSP0963 SPI Demo Instructions — UNO/Mega2560 (PDF)</a></li>
+  </ul>
+
+</div>
+</body>
+</html>
